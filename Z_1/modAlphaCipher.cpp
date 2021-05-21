@@ -28,7 +28,7 @@ std::string modAlphaCipher::decrypt(const std::string& cipher_text)
 inline std::vector<int> modAlphaCipher::convert(const std::string& s)
 {
     std::vector<int> result;
-    wstring w_s = codec.from_bytes(s); // перекодируем
+    wstring w_s = codec.from_bytes(s); // РїРµСЂРµРєРѕРґРёСЂСѓРµРј
     for (unsigned i=0; i<w_s.size(); i++) {
         result.push_back(alphaNum[w_s[i]]);
     }
