@@ -11,22 +11,22 @@ using namespace std;
 class modAlphaCipher
 {
 private:
-    std::string numAlpha = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"; //алфавит по порядку
-    std::string numalpha = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-    wstring_convert<codecvt_utf8<wchar_t>, wchar_t> codec; //кодек UTF-8
+    std::string numAlpha = "РђР‘Р’Р“Р”Р•РЃР–Р—РР™РљР›РњРќРћРџР РЎРўРЈР¤РҐР¦Р§РЁР©РЄР«Р¬Р­Р®РЇ"; //Р°Р»С„Р°РІРёС‚ РїРѕ РїРѕСЂСЏРґРєСѓ
+    std::string numalpha = "Р°Р±РІРіРґРµС‘Р¶Р·РёР№РєР»РјРЅРѕРїСЂСЃС‚СѓС„С…С†С‡С€С‰СЉС‹СЊСЌСЋСЏ";
+    wstring_convert<codecvt_utf8<wchar_t>, wchar_t> codec; //РєРѕРґРµРє UTF-8
     wstring ws = codec.from_bytes(numAlpha);
     std::wstring wa = codec.from_bytes(numalpha);
-    std::map <char,int> alphaNum; //ассоциативный массив "номер по символу"
-    std::vector <int> key; //ключ
-    std::vector<int> convert(const std::string& s); //преобразование строка-вектор
-    std::string convert(const std::vector<int>& v); //преобразование вектор-строка
+    std::map <char,int> alphaNum; //Р°СЃСЃРѕС†РёР°С‚РёРІРЅС‹Р№ РјР°СЃСЃРёРІ "РЅРѕРјРµСЂ РїРѕ СЃРёРјРІРѕР»Сѓ"
+    std::vector <int> key; //РєР»СЋС‡
+    std::vector<int> convert(const std::string& s); //РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ СЃС‚СЂРѕРєР°-РІРµРєС‚РѕСЂ
+    std::string convert(const std::vector<int>& v); //РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІРµРєС‚РѕСЂ-СЃС‚СЂРѕРєР°
     std::string getValidText(const std::string & s);
     std::string getValidKey(const std::string & s);
 public:
-    modAlphaCipher()=delete; //запретим конструктор без параметров
-    modAlphaCipher(const std::string& skey); //конструктор для установки ключа
-    std::string encrypt(const std::string& open_text); //зашифрование
-    std::string decrypt(const std::string& cipher_text);//расшифрование
+    modAlphaCipher()=delete; //Р·Р°РїСЂРµС‚РёРј РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+    modAlphaCipher(const std::string& skey); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё РєР»СЋС‡Р°
+    std::string encrypt(const std::string& open_text); //Р·Р°С€РёС„СЂРѕРІР°РЅРёРµ
+    std::string decrypt(const std::string& cipher_text);//СЂР°СЃС€РёС„СЂРѕРІР°РЅРёРµ
 };
 
 class cipher_error: public std::invalid_argument
