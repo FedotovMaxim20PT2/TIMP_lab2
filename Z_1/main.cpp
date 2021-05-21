@@ -19,9 +19,9 @@ void check(const string& Text, const string& key)
 
 int main(int argc, char **argv)
 {
-    check("ÏÎÊÀ","Ïğèâåò");
-    check("ÏÎÊÀ","");
-    check("ÏÎÊÀ","ÏĞÈÂÅÒ123");
-    check("Ï î ê à","ÏĞÈÂÅÒ");
-    check("123","ÏĞÈÂÅÒ");
+    check("ĞŸĞĞšĞ","ĞŸÑ€Ğ¸Ğ²ĞµÑ‚");
+    check("ĞŸĞĞšĞ","");
+    check("ĞŸĞĞšĞ","ĞŸĞ Ğ˜Ğ’Ğ•Ğ¢123");
+    check("ĞŸ Ğ¾ Ğº Ğ°","ĞŸĞ Ğ˜Ğ’Ğ•Ğ¢");
+    check("123","ĞŸĞ Ğ˜Ğ’Ğ•Ğ¢");
 }
